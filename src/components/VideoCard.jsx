@@ -2,22 +2,22 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {Typography,Card,CardContent,CardMedia} from '@mui/material'
 import {CheckCircle} from '@mui/icons-material'
-import {demoThumbnailUrl,demoChannelUrl,demoVideoUrl,demoChannelTitle,demoVideoTitle} from '../utils/constants.js'
+import {demoChannelUrl,demoVideoUrl,demoChannelTitle,demoVideoTitle} from '../utils/constants.js'
 
 function VideoCard({video}) {
     //console.log(video)
     const {id:{videoId},snippet}=video
-    console.log(videoId,snippet) 
+    //console.log(videoId,snippet) 
     return (
-        <Card sx={{width:{md:'350px',sx:'100%'},m:1}}>
+        <Card sx={{width:{sx:'100%',sm:'358px',md:'320px'},boxShadow:'none',borderRadius:0}}>
             <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
                 <CardMedia 
                     image={snippet?.thumbnails?.high?.url}
                     alt={snippet?.title}
-                    sx={{width:350,height:190}}>
+                    sx={{width:{xs:'100%',sm:'358px',md:'320px'},height:198}}>
                 </CardMedia>
             </Link>
-            <CardContent sx={{backgroundColor:'gray',height:100}}>
+            <CardContent sx={{backgroundColor:'gray',height:80}}>
                 <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
                     <Typography variant='subtitle1' fontWeight="bold" color='white'>
                     {
