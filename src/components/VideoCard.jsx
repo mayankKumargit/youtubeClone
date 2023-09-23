@@ -17,7 +17,7 @@ function VideoCard({video}) {
                     sx={{width:{xs:'100%',sm:'358px',md:'320px'},height:198}}>
                 </CardMedia>
             </Link>
-            <CardContent sx={{backgroundColor:'gray',height:80}}>
+            <CardContent sx={{backgroundColor:'gray',height:70}}>
                 <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
                     <Typography variant='subtitle1' fontWeight="bold" color='white'>
                     {
